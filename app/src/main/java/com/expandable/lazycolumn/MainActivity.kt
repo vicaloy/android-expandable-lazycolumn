@@ -24,7 +24,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.expandable.lazycolumn.ui.theme.NestedLazyColumnTheme
+import com.expandable.lazycolumn.ui.theme.ExpandableLazyColumnTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                     viewModel.onHeaderClick(item)
                 }
             }
-            NestedLazyColumnTheme {
+            ExpandableLazyColumnTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     List(
                         uiState.result,
